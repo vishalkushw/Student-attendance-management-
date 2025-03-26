@@ -11,7 +11,7 @@ const DisplayStudents = () => {
   // Fetch students
   const fetchStudents = async () => {
     try {
-      const { data } = await axios.get('http://localhost:8000/student/all');
+      const { data } = await axios.get('https://student-attendance-management-1.onrender.com/student/all');
       setStudents(data);
     } catch (error) {
       console.error('Error fetching students:', error);
@@ -31,7 +31,7 @@ const DisplayStudents = () => {
     }
 
     try {
-      await axios.put(`http://localhost:8000/student/attendance/${id}`, {
+      await axios.put(`https://student-attendance-management-1.onrender.com/student/attendance/${id}`, {
         status,
         date: attendanceDate,
       });

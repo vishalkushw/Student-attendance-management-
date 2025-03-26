@@ -27,7 +27,7 @@ const AdminLogin = () => {
         setError('');
 
         try {
-            const response = await axios.post('http://localhost:8000/admin/login', input);
+            const response = await axios.post('https://student-attendance-management-1.onrender.com/admin/login', input);
             if (response.status === 200) {
                 toast.success('Login Successful!');
                 localStorage.setItem('adminid', response.data.adminid);

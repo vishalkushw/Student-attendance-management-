@@ -23,7 +23,7 @@ const AddStudent = () => {
     e.preventDefault();
 
     try {
-      const { data } = await axios.post('http://localhost:8000/student/add', input);
+      const { data } = await axios.post('https://student-attendance-management-1.onrender.com/student/add', input);
       setInput({
         rollNo: '',
         name: '',

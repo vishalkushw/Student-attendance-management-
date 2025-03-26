@@ -10,7 +10,7 @@ const AttendanceRecords = () => {
   // Fetch all attendance records
   const fetchAllAttendance = async () => {
     try {
-      const { data } = await axios.get('http://localhost:8000/student/attendance/all');
+      const { data } = await axios.get('https://student-attendance-management-1.onrender.com/student/attendance/all');
       setAllRecords(data); // Store all records
       setAttendanceRecords(data); // Set initial records to display
     } catch (error) {
@@ -28,7 +28,7 @@ const AttendanceRecords = () => {
 
     try {
       const { data } = await axios.get(
-        `http://localhost:8000/student/attendance?date=${selectedDate}`
+        `https://student-attendance-management-1.onrender.com/student/attendance?date=${selectedDate}`
       );
       setAttendanceRecords(data); // Set records for the selected date
       setAllRecords(data); // Update all records
